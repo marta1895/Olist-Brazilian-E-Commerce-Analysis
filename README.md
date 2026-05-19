@@ -63,10 +63,3 @@ A `KEY FINDINGS` block at the end of the SQL file consolidates the conclusions (
 **Payments are credit-card-dominant.** Credit card = 75% of orders and 78% of revenue, with the highest AOV (~R$167). Boleto is a distant second at 20%. Voucher and debit are negligible.
 
 **Premium spend concentrates in three categories.** `watches_gifts`, `health_beauty`, and `bed_bath_table` together drive ~27% of top-quartile orders.
-
-## How to reproduce
-
-1. Download the dataset from Kaggle (link above) and load the nine CSVs into a PostgreSQL database. Table names used in the SQL file: `orders`, `order_items`, `payments`, `reviews`, `products`, `sellers`, `customers`, `geolocation`, `product_category`.
-2. Run `brazilian-ecommerce_cleaning.ipynb` to reproduce the cleaning steps (null handling on `orders`, `reviews`, `products`).
-3. Run `brazilian-ecommerce_analysis.sql` section by section in DBeaver (or any Postgres client). Each section is self-contained and commented.
-4. Open `Olist_E-Commerce_Visualisation.twbx` in Tableau Desktop or Tableau Public to explore the dashboard.
